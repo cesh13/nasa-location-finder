@@ -1,0 +1,30 @@
+{
+  "name": "nasa-location-finder",
+  "version": "1.0.0",
+  "description": "NASA API Front end app to find satelite images from location provided",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesh13/nasa-location-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cesh13/nasa-location-finder/issues"
+  },
+  "homepage": "https://github.com/cesh13/nasa-location-finder#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-fetch": "^3.0.0"
+  }
+}
