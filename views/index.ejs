@@ -25,21 +25,44 @@
         Satelite Images
     </h1>
     <form action="/" method="POST">
-        <label for="locationPoint">Location</label>
-        <input id="locationPoint" type="text" placeholder="lat,long" name="locationPoint" />
-        <input type="submit" value="send">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="locationPoint">Location</label>
+                    <input id="locationPoint" type="text" placeholder="lat,long" name="locationPoint"
+                        class="form-control col-md-4" />
+                </div>
+            </div>
+            <br>
+            <input type="submit" value="send" class="btn btn-primary">
+        </div>
     </form>
+    <br>
     <% if(Object.keys(data).length> 0){ %>
         <div class="row">
-            <% for(let i=0; i < data.length; i++){ %>
+            <% for(let i=0; i < 3; i++){ %>
                 <div class="col-md-4">
-                    <div class="mb-5">
-                        <img src=<%=data[i].url%> class="img-responsive" />
-                    </div>
+                    <img src=<%=data[i].url%> class="img-responsive img-rounded" alt="wrong-location-format" />
                 </div>
                 <% } %>
         </div>
-        <% } %>
+        <br>
+        <div class="row">
+            <% for(let i=3; i < 6; i++){ %>
+                <div class="col-md-4">
+                    <img src=<%=data[i].url%> class="img-responsive img-rounded" alt="wrong-location-format" />
+                </div>
+                <% } %>
+        </div>
+        <br>
+        <div class="row">
+            <% for(let i=6; i < 9; i++){ %>
+                <div class="col-md-4">
+                    <img src=<%=data[i].url%> class="img-responsive img-rounded" alt="wrong-location-format" />
+                </div>
+                <% } %>
+        </div>
+        <%}%>
 </body>
 
 </html>
